@@ -49,4 +49,61 @@ def validarTipoUsuario(user, contrasena):
 
 
     return 'User no valido'
+#----------------------------------------------------------------------
+#funcion para opciones de usuario cliente
+def UsuarioCliente():
+    while True:
+        print('1.Ver usuarios \n2.Regresar al login \n3.Salir')
+        opc =int(input('Seleccione su opcion: '))
+        match opc:
+            case 1:
+                verUsuario()
+            case 2:
+                print('Regresando al login...')
+                break
+            case 3:
+                return 1
+                break
+def UsuarioAdministrator():
+    while True:
+        print('1.Agregar nuevo usuario \n2.Eliminar usuario \n3.Modificar usuario \n4.Ver usuarios \n5.Regresar al login \n6.Salir')
+        opc =int(input('Seleccione su opcion: '))
+        match opc:
+            case 1:
+                nombreUs = input('Ingrese nombre: ')
+                apellidoUs = input('Ingrese apellido: ')
+                rol=int(input('Elija un rol para el nuevo usuario (1=Adminstrador, 2=Cliente)'))
+                crearUsuario(nombreUs, apellidoUs, rol)
+            case 2:
+                pass
+            case 3:
+                pass
+            case 4:
+                verUsuario()
+            case 5:
+                print('Regresando al login...')
+                break
+            case 6:
+                return 1
+                break
+            case 7:
+                print('Opcion no valida')
+#----------------------------------------------------------------------
+#menu de acciones parq cada tipo de usario
+while True:
+    Ingresar_usuario=str(input('Ingrese su usuario: '))
+    Ingresar_contraseña=str(input('Ingrese su contraseña: '))
 
+    #condicional para verificar el tipo de usuario
+    if validarTipoUsuario(Ingresar_usuario, Ingresar_contraseña)=='Usuario Cliente':
+        print('USUARIO ES DE TIPO CLIENTE')
+        UsuarioCliente()
+        if UsuarioCliente()==1:
+            break
+    elif validarTipoUsuario(Ingresar_usuario, Ingresar_contraseña)=='Usuario Administrator':
+        print ('USUARIO ES DE TIPO ADMINISTRATOR')
+        UsuarioAdministrator()
+        if UsuarioAdministrator()==1:
+            break
+    else:
+        print('Usuario no encontrado')
