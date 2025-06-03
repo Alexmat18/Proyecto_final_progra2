@@ -129,11 +129,11 @@ while True:
     Ingresar_contraseña=str(input('Ingrese su contraseña: '))
 
     #condicional para verificar el tipo de usuario
-    if validarTipoUsuario(Ingresar_usuario, Ingresar_contraseña)=='Usuario Cliente':
-        print('USUARIO ES DE TIPO CLIENTE')
-        #UsuarioCliente()
-        salida=UsuarioCliente()
-        if salida==1:
+    if validarTipoUsuario(Ingresar_usuario, Ingresar_contraseña)=='Usuario Cliente':#verificar el retorno de la funcion y compararlo con el usuario cliente
+        #y en lo que se compara se ejecuta la funcion
+        print('USUARIO DE TIPO CLIENTE')
+        salida=UsuarioCliente()#variable    que almacena el valor retornado por la funcion de usuario cliente
+        if salida==1:#si el retorno de la funcion es 1 que significa que el usuario eligio salir, se detiene el bucle principal
             break
     elif validarTipoUsuario(Ingresar_usuario, Ingresar_contraseña)=='Usuario Administrator':
         print ('USUARIO ES DE TIPO ADMINISTRATOR')
