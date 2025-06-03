@@ -95,8 +95,8 @@ def UsuarioCliente():
             case 2:
                 print('Regresando al login...')
                 break
-            case 3:
-                return 1
+            case 3:#detiene elbucle del usuari cliente
+                return 1#retorna un valor para detener el bucle principal
                 break
 def UsuarioAdministrator():
     while True:
