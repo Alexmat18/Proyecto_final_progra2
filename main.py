@@ -105,7 +105,7 @@ def UsuarioAdministrator():
         match opc:
             case 1: #crear un nuevo usuario
                 nombreUs = input('Ingrese nombre: ')
-                apellidoUs = input('Ingrese apellido: ')
+                contrasenaUs = input('Ingrese apellido: ')
                 rol=int(input('Elija un rol para el nuevo usuario (1=Adminstrador, 2=Cliente)'))
                 crearUsuario(nombreUs, apellidoUs, rol)
             case 2:
