@@ -118,8 +118,8 @@ def UsuarioAdministrator():
                 print('Regresando al login...')
                 break#detiene el bucle del usuario administrador
             case 6:
-                return 1
-                break
+                return 1#retorna un valor para detener el bucle principal
+                break#detiene el bucle del usuario administrador
             case 7:
                 print('Opcion no valida')
 #----------------------------------------------------------------------
