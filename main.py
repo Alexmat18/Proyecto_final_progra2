@@ -35,8 +35,7 @@ def verUsuario():
     usuarios = cr.fetchall()
     for usuario in usuarios:
         print(usuario)
-
-
+# ----------------------------------------------------------------------
 def validarTipoUsuario(user, contrasena):
     cr.execute('''
         SELECT * FROM usuarios ''')
