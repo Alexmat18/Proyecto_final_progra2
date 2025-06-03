@@ -45,9 +45,7 @@ def validarTipoUsuario(user, contrasena):
         if usuario[1]==user and usuario[2]==contrasena and usuario[3]==2:
                 return 'Usuario Cliente'.upper()
         if usuario[1]==user and usuario[2]==contrasena and usuario[3]==1:
-                return  'Usuario Administrator'.upper()
-
-
+                return  'Usuario Administrator'
     return 'User no valido'
 #----------------------------------------------------------------------
 #funcion para opciones de usuario cliente
