@@ -47,6 +47,43 @@ def validarTipoUsuario(user, contrasena):
         if usuario[1]==user and usuario[2]==contrasena and usuario[3]==1:
                 return  'Usuario Administrator'
     return 'User no valido'
+# ----------------------------------------------------------------------
+#UPDATE
+def actualizarUsuarios():
+    idUsuario = int(input("Ingrese ID para modificar: "))
+    print("Seleccione que desea modificar: ")
+    print("1. Nombre")
+    print("2. Contraseña")
+    print("3. Rol")
+    opcion = int(input())
+    match opcion:
+        case 1:
+            nuevoNombre = str(input("Ingrese el nuevo nombre: "))
+            cr.execute('''UPDATE usuarios
+                            SET nombre = ?
+                            WHERE idUsuario = ?''', (nuevoNombre, idUsuario))
+        case 2:
+            nuevaContraseña = str(input("Ingrese el nuevo nombre: "))
+            cr.execute('''UPDATE usuarios
+                                SET contraseña = ?
+                                WHERE idUsuario = ?''', (nuevaContraseña, idUsuario))
+
+        case 3:
+            nuevoRol = str(input("Ingrese el nuevo nombre: "))
+            cr.execute('''UPDATE roles
+                                SET nombreRol = ?
+                                WHERE idRol = ?''', (nuevoRol, idUsuario))
+    baseDeDatos.commit()
+
+    print("Usuario modificado exitosamente")
+# ----------------------------------------------------------------------
+# DELETE
+def eliminarUsuarios():
+    idUsuario = int(input("Ingrese ID para eliminar: "))
+    cr.execute('''DELETE FROM usuarios
+                  WHERE idUsuario = ?''', (idUsuario,))
+    baseDeDatos.commit()
+    print('Usuario eliminado exitosamente')
 #----------------------------------------------------------------------
 #funcion para opciones de usuario cliente
 def UsuarioCliente():
