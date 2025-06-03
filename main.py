@@ -102,8 +102,9 @@ while True:
             break
     elif validarTipoUsuario(Ingresar_usuario, Ingresar_contraseña)=='Usuario Administrator':
         print ('USUARIO ES DE TIPO ADMINISTRATOR')
-        UsuarioAdministrator()
-        if UsuarioAdministrator()==1:
+        #UsuarioAdministrator()
+        salida=UsuarioAdministrator()
+        if salida==1:
             break
     else:
         print('Usuario no encontrado')
