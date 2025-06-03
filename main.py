@@ -114,7 +114,7 @@ def UsuarioAdministrator():
                 actualizarUsuarios()
             case 4:#ver usuarios
                 verUsuario()
-            case 5:
+            case 5:#regresar al login
                 print('Regresando al login...')
                 break
             case 6:
