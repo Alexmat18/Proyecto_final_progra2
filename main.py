@@ -116,7 +116,7 @@ def UsuarioAdministrator():
                 verUsuario()
             case 5:#regresar al login
                 print('Regresando al login...')
-                break
+                break#detiene el bucle del usuario administrador
             case 6:
                 return 1
                 break
