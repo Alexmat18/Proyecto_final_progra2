@@ -97,8 +97,9 @@ while True:
     #condicional para verificar el tipo de usuario
     if validarTipoUsuario(Ingresar_usuario, Ingresar_contraseña)=='Usuario Cliente':
         print('USUARIO ES DE TIPO CLIENTE')
-        UsuarioCliente()
-        if UsuarioCliente()==1:
+        #UsuarioCliente()
+        salida=UsuarioCliente()
+        if salida==1:
             break
     elif validarTipoUsuario(Ingresar_usuario, Ingresar_contraseña)=='Usuario Administrator':
         print ('USUARIO ES DE TIPO ADMINISTRATOR')
