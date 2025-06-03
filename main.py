@@ -103,7 +103,7 @@ def UsuarioAdministrator():
         print('1.Agregar nuevo usuario \n2.Eliminar usuario \n3.Modificar usuario \n4.Ver usuarios \n5.Regresar al login \n6.Salir')
         opc =int(input('Seleccione su opcion: '))
         match opc:
-            case 1:
+            case 1: #crear un nuevo usuario
                 nombreUs = input('Ingrese nombre: ')
                 apellidoUs = input('Ingrese apellido: ')
                 rol=int(input('Elija un rol para el nuevo usuario (1=Adminstrador, 2=Cliente)'))
