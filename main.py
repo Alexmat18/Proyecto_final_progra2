@@ -42,7 +42,7 @@ def validarTipoUsuario(user, contrasena):
     usuarios = cr.fetchall()
     for usuario in usuarios:
         if usuario[1]==user and usuario[2]==contrasena and usuario[3]==2:
-                return 'Usuario Cliente'.upper()
+                return 'Usuario Cliente'
         if usuario[1]==user and usuario[2]==contrasena and usuario[3]==1:
                 return  'Usuario Administrator'
     return 'User no valido'
