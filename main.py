@@ -107,12 +107,12 @@ def UsuarioAdministrator():
                 nombreUs = input('Ingrese nombre: ')
                 contrasenaUs = input('Ingrese apellido: ')
                 rol=int(input('Elija un rol para el nuevo usuario (1=Adminstrador, 2=Cliente)'))
-                crearUsuario(nombreUs, apellidoUs, rol)
-            case 2:
-                pass
-            case 3:
-                pass
-            case 4:
+                crearUsuario(nombreUs, contrasenaUs, rol)
+            case 2:#eliminar un usuario
+                eliminarUsuarios()
+            case 3:#actualizar un nuevo usuario
+                actualizarUsuarios()
+            case 4:#ver usuarios
                 verUsuario()
             case 5:
                 print('Regresando al login...')
