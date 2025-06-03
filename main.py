@@ -138,7 +138,7 @@ while True:
     elif validarTipoUsuario(Ingresar_usuario, Ingresar_contraseña)=='Usuario Administrator':
         print ('USUARIO DE TIPO ADMINISTRATOR')
         salida=UsuarioAdministrator()
-        if salida==1:
+        if salida==1:#si el retorno de la funcion es 1 que significa que el usuario eligio salir, se detiene el bucle principal
             break
     else:
         print('Usuario no encontrado')
